@@ -19,5 +19,7 @@ ClassName obj1, obj2, etc..;
 
 Scope/access specifiers:  
 `private` : data & methods accessible inside class (by default, everything is declared under private)  
+
 `public` : data & methods accessible to everyone  
+
 `protected` : (useful in inheritance) data & methods accessible inside class & to its derived class  
