@@ -43,12 +43,12 @@ Three types of constructors:
     ``` cpp
         className obj1(parameters);
         className obj2(obj1);
-    ```
-    types of copy:
-        - `shallow copy`: copies all the member values from one object to another (majority use case) problematic when Dynamic memory allocation invovled
-        - `deep copy`: makes copies of member values and also copies of dynamically allocated memory the member points to
+    ```  
+Types of copy:
+    - `shallow copy`: copies all the member values from one object to another (majority use case) problematic when Dynamic memory allocation invovled  
+    - `deep copy`: makes copies of member values and also copies of dynamically allocated memory the member points to  
 
-all three types having the same name (as the class name) can be used in the same program but with different types of parameters. This feature of a constructor to be defined in different ways based on parameters is called `Constructor Overloading` and is an example of `Polymorphism`
+All three types having the same name (as the class name) can be used in the same program but with different types of parameters. This feature of a constructor to be defined in different ways based on parameters is called `Constructor Overloading` and is an example of `Polymorphism`
 
 "this -> " is a special pointer in C++ used to point to the current pointer and its properties and methods. Used when programmer wants to pass the parameteres with the same name as properties so uses this->properties to refer to the objects properties.
 
