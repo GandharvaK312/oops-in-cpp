@@ -44,9 +44,9 @@ Three types of constructors:
         className obj1(parameters);
         className obj2(obj1);
     ```  
-Types of copy:
-    - `shallow copy`: copies all the member values from one object to another (majority use case) problematic when Dynamic memory allocation invovled  
-    - `deep copy`: makes copies of member values and also copies of dynamically allocated memory the member points to  
+Types of copy:  
+- `shallow copy`: copies all the member values from one object to another (majority use case) problematic when Dynamic memory allocation invovled  
+- `deep copy`: makes copies of member values and also copies of dynamically allocated memory the member points to  
 
 All three types having the same name (as the class name) can be used in the same program but with different types of parameters. This feature of a constructor to be defined in different ways based on parameters is called `Constructor Overloading` and is an example of `Polymorphism`
 
