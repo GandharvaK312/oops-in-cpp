@@ -67,16 +67,22 @@ public:
 
 class Student {
 public:
-	string name; double cgpa;
+	string name; double* cgpaPtr;
 
 	Student(string name, double cgpa){
 		this -> name = name;
-		this -> cgpa = cgpa;
+		cgpaPtr = new double;
+		*cgpaPtr = cgpa;
+	}
+
+	Student(Student &obj){
+		this -> name = obj.name;
+		this -> cgpaPtr = obj.cgpaPtr;
 	}
 
 	void getInfo(){
 		cout << "name: " << name << endl;
-		cout << "cgpa: " << cgpa << endl;
+		cout << "cgpa: " << *cgpaPtr << endl;
 	}
 };
 
@@ -97,5 +103,10 @@ int main(void){
 
 	Student s1("rahul kumar", 9.9);
 	s1.getInfo();
+	
+	Student s2(s1); // shallow copy
+	*(s2.cgpaPtr) = 9.2;
+	s1.getInfo(); // changing s2's cgpa also changed s1's properties. this is one of the most important problems with shallow copy
+	
 	return 0;
 }
