@@ -32,6 +32,7 @@ const int runtime_size = x;       // OK: read-only, but initialized at runtime
 constexpr int square(int n) {     // A constexpr function
     return n * n;
 }
+
 constexpr int result = square(5); // Evaluated at compile time
 
 ```
